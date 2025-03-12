@@ -1,4 +1,5 @@
 import { useAssistants } from '@renderer/hooks/useAssistant'
+import { useGjInit } from '@renderer/hooks/useGJInit'
 import { useSettings } from '@renderer/hooks/useSettings'
 import { useActiveTopic } from '@renderer/hooks/useTopic'
 import NavigationService from '@renderer/services/NavigationService'
@@ -14,6 +15,7 @@ import HomeTabs from './Tabs'
 let _activeAssistant: Assistant
 
 const HomePage: FC = () => {
+  useGjInit()
   const { assistants } = useAssistants()
   const navigate = useNavigate()
 
